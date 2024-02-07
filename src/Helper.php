@@ -1,13 +1,13 @@
 <?php
 
-namespace Afosto\Acme;
+namespace CodeAdminDe\Acme;
 
 use GuzzleHttp\Exception\ClientException;
 
 /**
  * Class Helper
  * This class contains helper methods for certificate handling
- * @package Afosto\Acme
+ * @package CodeAdminDe\Acme
  */
 class Helper
 {

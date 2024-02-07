@@ -1,4 +1,5 @@
-Copyright 2018 Afosto SaaS BV
+* Copyright 2018 Afosto SaaS BV 
+* Copyright 2024 Frederic Roggon (codeadminde/yaac)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

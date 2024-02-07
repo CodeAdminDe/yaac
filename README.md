@@ -2,6 +2,8 @@
 
 Written in PHP, this client aims to be a simplified and decoupled Let’s Encrypt client, based on [ACME V2](https://tools.ietf.org/html/rfc8555).
 
+> Originally developed by Afosto SaaS BV, further development of the fork for own use and for adaptation to ACME server requirements by CodeAdminDe.
+
 ## Decoupled from a filesystem or webserver
 
 Instead of, for example writing the certificate to the disk under an nginx configuration, this client just returns the 
@@ -32,7 +34,7 @@ client and you can start requesting certificates.
 
 Installing this package is done easily with composer. 
 ```bash
-composer require afosto/yaac
+composer require codeadminde/yaac
 ```
 
 ### Instantiate the client
@@ -44,7 +46,7 @@ decide whether you want to issue `Fake LE Intermediate X1` (staging: `MODE_STAGI
 ```php
 use League\Flysystem\Filesystem;
 use League\Flysystem\Adapter\Local;
-use Afosto\Acme\Client;
+use CodeAdminDe\Acme\Client;
  
 //Prepare flysystem
 $adapter = new Local('data');
@@ -205,6 +207,8 @@ file_put_contents('private.key', $certificate->getPrivateKey());
 
 Are you using this package, would love to know. Please send a PR to enlist your project or company. 
 - [Afosto SaaS BV](https://afosto.com)
+- [Frederic Roggon](https://codeadmin.de)
+- [IT-Habich - Frederic Roggon](https://it-habich.de)
 - [Aitrex - Free Let's Encrypt SSL Certificate Generator](https://aitrex.com/freessl.php)
 - [Web Whales](https://webwhales.nl)
 - [do.de](https://www.do.de)

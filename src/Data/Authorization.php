@@ -1,9 +1,9 @@
 <?php
 
-namespace Afosto\Acme\Data;
+namespace CodeAdminDe\Acme\Data;
 
-use Afosto\Acme\Client;
-use Afosto\Acme\Helper;
+use CodeAdminDe\Acme\Client;
+use CodeAdminDe\Acme\Helper;
 
 class Authorization
 {

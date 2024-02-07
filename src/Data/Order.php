@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Afosto\Acme\Data;
+namespace CodeAdminDe\Acme\Data;
 
 class Order
 {
