@@ -38,6 +38,11 @@ class Certificate
     protected $expiryDate;
 
     /**
+     * @var \DateTime
+     */
+    protected $issueDate;
+
+    /**
      * Certificate constructor.
      * @param $privateKey
      * @param $csr
@@ -51,6 +56,7 @@ class Certificate
         $this->chain = $chain;
         list($this->certificate, $this->intermediateCertificate) = Helper::splitCertificate($chain);
         $this->expiryDate = Helper::getCertExpiryDate($chain);
+        $this->issueDate = Helper::getCertIssueDate($chain);
     }
 
     /**
@@ -69,6 +75,15 @@ class Certificate
     public function getExpiryDate(): \DateTime
     {
         return $this->expiryDate;
+    }
+
+    /**
+     * Get the issue date of the current certificate
+     * @return \DateTime
+     */
+    public function getIssueDate(): \DateTime
+    {
+        return $this->issueDate;
     }
 
     /**

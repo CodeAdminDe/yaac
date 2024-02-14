@@ -47,6 +47,26 @@ class Helper
     }
 
     /**
+     * Return certificate issue date
+     *
+     * @param $certificate
+     *
+     * @return \DateTime
+     * @throws \Exception
+     */
+    public static function getCertIssueDate($certificate): \DateTime
+    {
+        $info = openssl_x509_parse($certificate);
+        if ($info === false) {
+            throw new \Exception('Could not parse certificate');
+        }
+        $dateTime = new \DateTime();
+        $dateTime->setTimestamp($info['validFrom_time_t']);
+
+        return $dateTime;
+    }
+
+    /**
      * Get a new key
      *
      * @return string
